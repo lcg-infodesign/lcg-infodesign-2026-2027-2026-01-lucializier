@@ -34,35 +34,30 @@ function draw() {
   }
   pop();
   
-  // ELEMENTI CON CONTORNO NERO
   push();
-  noStroke();
-
   // COLLINE
+  noStroke();
   fill(175, 230, 140); 
-  // Collina sinistra
   ellipse(200, 550, 700, 300);
-  // Collina destra
   ellipse(650, 550, 750, 350);
 
   // PENTOLA D'ORO
-  stroke(0); 
+  stroke(0); //nero
   strokeWeight(2); 
   let potX = 540;
   let potY = 350;
 
   fill(70, 70, 70); 
-  // piedini della pentola
+  ellipse(potX, potY, 150, 110);
+  // piedi della pentola
   triangle(potX - 45, potY + 30, potX - 60, potY + 60, potX - 20, potY + 45);
   triangle(potX + 45, potY + 30, potX + 60, potY + 60, potX + 20, potY + 45); // right per simmetria da left
-  // Corpo principale della pentola
-  ellipse(potX, potY, 150, 110);
   
   // Oro
   fill(255, 220, 0); 
   ellipse(potX, potY - 45, 130, 50);
 
-  // ANIMAZIONE oro brilla
+// ANIMAZIONE oro brilla
 // Raggio sinistro
   if (frameCount % 40 < 20) { //il ciclo si ripete ogni 40 secondi, nei primi 20 la condizione è vera quindi il raggio appare, da 20 a 39 no
     push(); 
