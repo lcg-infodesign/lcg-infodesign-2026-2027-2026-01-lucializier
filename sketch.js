@@ -8,7 +8,7 @@ function draw() {
   // ARCOBALENO
   push();
   noFill(); 
-  let sw = 18; // Spessore di ogni singola fascia
+  let sw = 18; // Spessore fascia
   strokeWeight(sw);
 
   // Arrey: Colori arcobaleno
@@ -59,11 +59,11 @@ function draw() {
 
 // ANIMAZIONE oro brilla
 // Raggio sinistro
-  if (frameCount % 40 < 20) { //il ciclo si ripete ogni 40 secondi, nei primi 20 la condizione è vera quindi il raggio appare, da 20 a 39 no
+  if (frameCount % 40 < 20) { //il ciclo si ripete ogni 40 secondi, nei primi 19 la condizione e vera quindi il raggio appare, da 20 a 39 no
     push(); 
     translate(potX - 30, potY - 65); // Sposta l'origine 
     rotate(-PI / 4); //45 gradi verso sinistra
-    rectMode(CENTER); // rettangolo partendo dal suo centro
+    rectMode(CENTER); 
     rect(0, 0, 6, 20, 10); 
     pop(); 
   }
